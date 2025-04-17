@@ -8,7 +8,7 @@ import { concatenateStrings } from "@/lib/flag";
 
 export default async function Page({ params }: { params: { name: string } }) {
     const data: CountryInfo = await getDetailedViewData(params.name);
-    const flagcdn = `https://flagcdn.com/${data.flag}.svg`.toLowerCase();
+    
     return (
         <div className="px-10 flex-1">
             <h1 className="text-4xl font-bold text-center">{data.name} </h1>
