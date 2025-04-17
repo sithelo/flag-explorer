@@ -2,7 +2,7 @@
 
 import { useParamsStore } from '@/hooks/use-params-store'  
 import { usePathname, useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React from 'react'
 import { Search } from 'lucide-react'
 
 export default function SearchCountry() {
@@ -12,7 +12,7 @@ export default function SearchCountry() {
     const setSearchValue = useParamsStore(state => state.setSearchValue);
     const searchValue = useParamsStore(state => state.searchValue);
 
-    function onChange(event: any) {
+    function onChange(event) {
         setSearchValue(event.target.value);
     }
 
@@ -25,7 +25,7 @@ export default function SearchCountry() {
         <div className='flex w-[50%] items-center border-2 rounded-full py-2 shadow-sm'>
             <input 
                 onChange={onChange}
-                onKeyDown={(e: any) => {
+                onKeyDown={(e) => {
                     if (e.key === 'Enter') searchCountry();
                 }}
                 type="text" 

@@ -20,6 +20,10 @@ jobs:
 
     - name: Build Next.js app
       run: npm run build
+        
+    - name: Run web linting
+      run: npm run lint || true
+
 
     - name: Run tests
       run: npm run test

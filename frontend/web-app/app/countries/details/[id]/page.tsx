@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/ui/icon";
-import { Button } from "@/components/ui/button";
 import { CountryInfo } from "@/types/country";
 import { getDetailedViewData } from "@/use-cases/countries";
 import { concatenateStrings } from "@/lib/flag";
